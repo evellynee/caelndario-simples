@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+.semana {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    height: 120px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px 40px;
+}
+
+.semana li {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    border-radius: 20px;
+    font-size: 1.25rem;
+}
+
+.semana li.atual {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    font-size: 1.65rem;
+    font-weight: 500;
+    background: blueviolet;
+    color: #040305;
+    border: 5px solid #000000;
+    transform: translateY(-70px);
+    cursor: pointer;
+}
+
+.semana li.atual::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    top: 44px;
+    left: -36px;
+    border-top-right-radius: 10px;
+    box-shadow: 6px -6px #000000;
+}
+
+.semana li.atual::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    top: 44px;
+    right:-36px;
+    border-top-left-radius: 10px;
+    box-shadow: -6px -6px #000000;
+}
+
+.semana li.atual h1{
+    position: absolute;
+    transform: translateY(76px);
+    font-size: 1.6rem;
+    color: #040305;
+}
+
+.semana li.atual h5{
+    position: absolute;
+    transform: translateY(102px);
+    font-size: .75rem;
+    font-weight: 500;
+    color: #040305;
+}
+
+.semana li.atual h3{
+    position: absolute;
+    transform: translateY(-62px);
+    font-size: .85rem;
+    font-weight: 500;
+    color: #040305;
+}
